@@ -32,7 +32,7 @@ class MainWindow(QtWidgets.QMainWindow, MainF):
         self.dirLineEdit.mouseDoubleClickEvent = setDirectory
 
         self.SearchButton.clicked.connect(lambda: self.Search())
-        self.pushButton.clicked.connect(lambda: self.pr())
+        # self.pushButton.clicked.connect(lambda: self.pr())
 
         self.action_help.triggered.connect(lambda: self.help())
         self.action_settings.triggered.connect(lambda: self.settings())
@@ -64,11 +64,10 @@ class MainWindow(QtWidgets.QMainWindow, MainF):
                 2000
             )
 
-    def pr(self):
-        pass
 
     def help(self):
         self.h = Help()
+
         self.h.show()
 
     def settings(self):
